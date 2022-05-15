@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: whitesmoke;
+}
+.banner {
+    font-size: xx-large;
+    font-style: italic;
+    text-align: left;
+    padding-bottom: 0.2em;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+    color: white;
+    background-color: #2e3138;
+    min-width: 900px;
+}
+
+.make-your-selection {
+    padding-left: 0.7em;
+    padding-top: 0.3em;
+}
+
+.container-main {
+    margin: 2em;
+}
+
+.btn.btn-info.btn-lg {
+    margin: 0.1em;
+    border: #6990eb solid 2px;
+    background-color: #393a85;
+    color: white;
+}
+
+.form-control {
+    width: 500px;
+}
+
+.form-label {
+    font-weight: bolder;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+
+footer {
+    display: inline;
+    text-align: right;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer_container {
+    background-color: #2e3138;
+    height: 4em;
+    padding: 0.5em;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 0;
+}
+
+.footer_item {
+    display: inline-flex;
+    color: white;
+    padding: 0.7rem;
+    margin-right: 20px;
+}
+
+.footer_item_2 {
+    display: inline-flex;
+    color: white;
+    float: right;
+    margin-right: 1em;
+    padding: 0.7rem;
+}
+
+.profile-info {
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 1em 1.5em 0 1.5em;
+}
+
+.exp-date {
+    border: solid rgb(0, 0, 0) 3px;
+    border-radius: 10px;
+    padding: 0.5em;
+    background-color: #a33232;
+    width: 14em;
+    margin-top: 0.5em;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.save-button {
+    text-align: right;
+    margin-top: 1em;
+    margin-right: 1.5em;
+}
+
+.profile-info h4 {
+    margin-bottom: 0;
+    color: rgb(16, 16, 165);
+    font-weight: lighter;
+    font-size: 1.7em;
+}
