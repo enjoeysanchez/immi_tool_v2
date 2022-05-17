@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
     <title>ImmiTools | Create Profile</title>
+    <link rel="icon" type="image/x-icon" href="https://icons.iconarchive.com/icons/arrioch/whack/256/Whack-Google-Earth-icon.png">
+
   </head>
 
   <body>
@@ -46,7 +49,8 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href ="https://www.uscis.gov/working-in-the-united-states" target=”_blank”>USCIS Official Site</a>
+                <a class="nav-link active" aria-current="page"
+                href ="https://www.uscis.gov/working-in-the-united-states" target=”_blank”>USCIS Official Site</a>
               </li>
               
             </ul>
@@ -59,22 +63,22 @@
     </nav>
 
     <!-- CREATE PROFILE -->
-    <form id="form">
+    <form id="form" name="form">
         <div class="save-button">
-            <button type="reset" class="btn btn-secondary">Reset</button>
-            <button type="submit" id="submit" class="btn btn-success">Save & Submit</button>
+            <button type="reset" class="btn btn-danger">Reset/Delete All</button>
+            <button type="submit" id="submit" class="btn btn-success" value="register">Save & Submit</button>
         </div>
-        <div class="profile-info">
+        <div class="profile-info" name="profileInfo">
             <div class="div1">                
                 <h4>Employee Information</h4><br>            
                 <label for="fullName" class="form-label">Full Name</label>
-                <input required type="text" class="form-control" id="fullName" name="fullName" placeholder="Full name is required">
+                <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Full name is required">
             
                 <label for="idNumber" class="form-label">ID Number</label>
-                <input required type="text" class="form-control" id="idNumber" name="idNumber" placeholder="Enter ID Number">
+                <input type="text" class="form-control" id="idNumber" name="idNumber" placeholder="Enter ID Number">
                 
                 <label for="email" class="form-label">Email Address</label>
-                <input required type="email" class="form-control" id="email" name="email" placeholder="name@domain.com">
+                <input type="email" class="form-control" id="email" name="email" placeholder="name@domain.com">
                 
                 <label for="jobPosition" class="form-label">Job Position</label>
                 <input required type="text" class="form-control" id="jobPosition" name="jobPosition" placeholder="Job Position / Career Level">
@@ -84,17 +88,15 @@
             <h4>Visa Type & Supporting Documents</h4><br>
 
                 <!-- SELECT VISA TYPE -->
-                <label for="input-group mb-2" class="form-label">Please select your Visa Type</label>
-                <div class="input-group mb-2">
-                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">VISA TYPE</button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">H-1B</a></li>
-                        <li><a class="dropdown-item" href="#">L1</a></li>
-                        <li><a class="dropdown-item" href="#">TN</a></li>
-                        <li><a class="dropdown-item" href="#">EAD</a></li>
-                    </ul>
-                    <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Visa type selected will appear here">
-                </div>
+                <label for="input-group mb-2" class="form-label">Please select your Visa Type</label>            
+                <select id="visaType" class="form-select" aria-label="Default select">
+                  <option selected="">----- Visa Type Selector -----</option>
+                  <option value="H-1B">H-1B</option>
+                  <option value="L1">L1</option>
+                  <option value="TN">TN</option>
+                  <option value="EAD">EAD</option>
+                </select>
+
                 <div>
                     <label for="formFile" class="form-label">File Uploader (Supporting Documents)</label>
                     <input class="form-control" type="file" id="formFile">
@@ -104,29 +106,23 @@
                 <!-- I-140 STATUS -->
                 <h4 style="color: darkblue;">I-140 Status</h4>
                 <div class="check_i140">
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuDark"
-                        data-bs-toggle="dropdown" aria-expanded="false">Select the I-140 Status</button>
-                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuDark">
-                            <li><a class="dropdown-item" href="#">Approved (Sponsored by the Company)</a></li>
-                            <li><a class="dropdown-item" href="#">Approved (Previous Employer)</a></li>
-                            <li><a class="dropdown-item" href="#">N/A</a></li>
-                        </ul>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="I-140 status will appear here" aria-label="Case Notes" aria-describedby="input-group-right">
-                            <span class="input-group-text" id="input-group-right-example">I-140 Status</span>
-                        </div>
-                    </div><br>
+                    <select id="i140" class="form-select" aria-label="Default select">
+                      <option selected="">----- I-140 Status Selector -----</option>
+                      <option value="Approved (Sponsored)">Approved (Sponsored by the Company)</option>
+                      <option value="Approved (Previous Employer)">Approved (Previous Employer)</option>
+                      <option value="No I-140">N/A (Employee does NOT hold an approved I-140)</option>                      
+                    </select><br>
+
                     <p style="font-weight: bold">MAX OUT DATE: <input type="text"> </p>
                 </div>
 
                 <!-- CASE NOTES -->
                 <div>
                 <h4 style="color: darkblue;">Case Notes</h4>
-                    <div class="input-group">
-                        <input type="text" id="caseNote" class="form-control" placeholder="Please add Case Notes if necessary" aria-label="Case Notes" aria-describedby="input-group-right">
-                        <span class="input-group-text" id="input-group-right-example">Add Case Note</span>
-                    </div>
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="caseNotes" style="height: 100px"></textarea>
+                    <label for="floatingTextarea">Leave your comments here:</label>
+                  </div>
                 </div><br>                          
             </div>
         </div>
