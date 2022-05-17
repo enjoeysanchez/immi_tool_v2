@@ -1,8 +1,8 @@
 
 // Get information from the New Profile form
-const form = document.getElementById("form")
+const formProfile = document.getElementById("formProfile")
 
-form.addEventListener("submit", function(event) {
+formProfile.addEventListener("submit", function(event) {
     event.preventDefault()  //Prevent AutoSubmitting the form
 
     var fullName = document.getElementById("fullName").value
@@ -34,7 +34,7 @@ form.addEventListener("submit", function(event) {
 // Form Validation
 function validateForm() {
 
-var validateName = document.form.profileInfo.fullName.value;
+var validateName = document.formProfile.profileInfo.fullName.value;
 if (validateName == null || validateName == "") {  
     alert("Name can't be blank. Please type the employees full name");  
     validateName.focus();
