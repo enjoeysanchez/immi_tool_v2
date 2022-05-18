@@ -1,3 +1,13 @@
+// Form Validation
+function validateForm() {
+
+var validateName = document.formProfile.profileInfo.fullName.value;
+if (validateName == null || validateName == "") {  
+    alert("Name can't be blank. Please type the employees full name");  
+    validateName.focus();
+    return false; 
+    }
+}
 
 // Get information from the New Profile form
 const formProfile = document.getElementById("formProfile")
@@ -29,20 +39,6 @@ formProfile.addEventListener("submit", function(event) {
     var caseNotes = document.getElementById("caseNotes").value
     console.log("Case Notes:", caseNotes);    
 })
-
-
-// Form Validation
-function validateForm() {
-
-var validateName = document.formProfile.profileInfo.fullName.value;
-if (validateName == null || validateName == "") {  
-    alert("Name can't be blank. Please type the employees full name");  
-    validateName.focus();
-    return false; 
-    }
-}
-
-
 
 
 /*var validateId = document.form.idNumber.value;
