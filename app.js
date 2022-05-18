@@ -41,6 +41,9 @@ formProfile.addEventListener("submit", function(event) {
 })
 
 
+
+// ----------------- Comentarios de referencia y pedazos de código que pueden servir --------------
+
 /*var validateId = document.form.idNumber.value;
 var validateEmail = document.form.email.value;
 var validateExpDate = document.form.expDate.validateEmail.value;*/
