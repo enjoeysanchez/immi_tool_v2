@@ -1,7 +1,7 @@
 // Form Validation
 function validateForm() {
 
-var validateName = document.formProfile.profileInfo.fullName.value;
+var validateName = document.formProfile.profileInfo.div1.fullName.value;
 if (validateName == null || validateName == "") {  
     alert("Name can't be blank. Please type the employees full name");  
     validateName.focus();

@@ -108,3 +108,7 @@ footer {
     font-weight: lighter;
     font-size: 1.7em;
 }
+
+#cost-estimation {
+    margin-left: 3em;
+}
