@@ -33,6 +33,14 @@ body {
     border: #6990eb solid 2px;
     background-color: #393a85;
     color: white;
+    box-shadow:7px 7px 15px 7px rgba(30, 30, 60, 0.27);
+}
+
+.btn.btn-info.btn-lg:hover {
+    cursor: pointer;
+    color: aqua;
+    box-shadow : 2px 2px 0.5px rgb(114, 111, 113);
+    transition: 0.5s;
 }
 
 .form-control {
@@ -111,4 +119,8 @@ footer {
 
 #cost-estimation {
     margin-left: 3em;
+}
+
+#dependentSelector {
+    width: 250px;
 }

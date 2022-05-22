@@ -1,14 +1,3 @@
-// Form Validation
-function validateForm() {
-
-var validateName = document.formProfile.profileInfo.div1.fullName.value;
-if (validateName == null || validateName == "") {  
-    alert("Name can't be blank. Please type the employees full name");  
-    validateName.focus();
-    return false; 
-    }
-}
-
 // Get information from the New Profile form
 const formProfile = document.getElementById("formProfile")
 
@@ -40,13 +29,40 @@ formProfile.addEventListener("submit", function(event) {
     console.log("Case Notes:", caseNotes);    
 })
 
+/*// Get information from the Cost Estimate Form
+const costEstimateForm = document.getElementById("costEstimateForm")
 
+costEstimateForm.addEventListener("submit", function(event) {
+    event.preventDefault() 
+
+    var dependentSelector = document.getElementById("dependentSelector").value
+    console.log("Traveling with dependents:", dependentSelector);
+
+
+})
 
 // ----------------- Comentarios de referencia y pedazos de código que pueden servir --------------
 
-/*var validateId = document.form.idNumber.value;
+
+// Form Validation
+
+/*
+function validateForm() {
+
+var validateName = document.formProfile.profileInfo.div1.fullName.value;
+if (validateName == null || validateName == "") {  
+    alert("Name can't be blank. Please type the employees full name");  
+    validateName.focus();
+    return false; 
+    }
+}
+*/
+
+/*
+var validateId = document.form.idNumber.value;
 var validateEmail = document.form.email.value;
-var validateExpDate = document.form.expDate.validateEmail.value;*/
+var validateExpDate = document.form.expDate.validateEmail.value;
+*/
 
 
 /*
@@ -62,12 +78,9 @@ function validateform(){
       return false;  
       }  
     }  
-
 */
 
-
 /*
-
     //valido el nombre
     if (document.fvalida.nombre.value.length == 0) {
         alert("Tiene que escribir su nombre")
@@ -117,7 +130,4 @@ function validarEntero(valor) {
         return valor
     }
 }
-
-
-
 */
